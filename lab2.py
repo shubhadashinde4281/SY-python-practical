@@ -4,7 +4,7 @@ rice_price_per_kg =50
 rice_total = rice_qty * rice_price_per_kg
 
 
-sugar_qty = float(input("Enter The Quantity Of rice(in kg):"))
+sugar_qty = float(input("Enter The Quantity Of sugar(in kg):"))
 sugar_price_per_kg = 40
 sugar_total = sugar_qty * sugar_price_per_kg
 
