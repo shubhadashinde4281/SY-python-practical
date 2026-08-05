@@ -20,7 +20,7 @@ total=0
 other=0
 
 while True:
-    value=float(input("Enter Your Amount"))
+    value=float(input("Enter Your Amount:"))
     if value==-1:
         break
 
