@@ -24,7 +24,7 @@ while True:
     if value==-1:
         break
 
-    category=str(input("Enter a category(food/shopping/travel/others):")).lower()
+    category=str(input("Enter a category(food/shopping/travel/other):")).lower()
 
     if category=="food":
         food=food+value
@@ -32,7 +32,7 @@ while True:
     elif category=="shopping":
         shopping=shopping+value
     elif category=="travel":
-        ttravel=travel+value
+        travel=travel+value
     elif category=="other":
         other=other+value
 
@@ -46,4 +46,3 @@ print("Travel:",travel)
 print("Shopping:",shopping)
 print("Other",other)
 print("Total",total)
-
