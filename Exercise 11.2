@@ -1,0 +1,34 @@
+2. Create a daily class schedule grid where each row represents an hour slot and columns
+correspond to days of the week, allowing users to view or overwrite subject topics
+dynamically.
+
+
+# Daily Class Schedule
+
+days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
+schedule = [
+    ["Maths", "Python", "OS", "DBMS", "AI"],
+    ["Python", "Maths", "DBMS", "AI", "OS"],
+    ["OS", "AI", "Maths", "Python", "DBMS"],
+    ["AI", "DBMS", "Python", "OS", "Maths"]
+]
+
+print("Class Schedule:")
+for i in range(4):
+    print("Hour", i + 1, ":", schedule[i])
+
+# Overwrite a subject
+hour = int(input("\nEnter hour slot (1-4): "))
+day = int(input("Enter day (1-5): "))
+subject = input("Enter new subject: ")
+
+if 1 <= hour <= 4 and 1 <= day <= 5:
+    schedule[hour - 1][day - 1] = subject
+    print("\nSchedule updated successfully!")
+else:
+    print("Invalid hour or day.")
+
+# Display updated schedule
+print("\nUpdated Class Schedule:")
+for i
