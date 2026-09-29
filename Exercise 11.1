@@ -1,0 +1,33 @@
+1. Develop a movie theatre booking simulator that manages a 3 × 3 seating grid layout. The
+program should accept user row and column selections and change that seat's status
+keyword from "O" (Open) to "X" (Reserved).
+
+
+
+# Movie Theatre Booking Simulator
+
+seats = [
+    ["O", "O", "O"],
+    ["O", "O", "O"],
+    ["O", "O", "O"]
+]
+
+print("Initial Seating Layout:")
+for row in seats:
+    print(row)
+
+row = int(input("Enter row number (1-3): "))
+col = int(input("Enter column number (1-3): "))
+
+if 1 <= row <= 3 and 1 <= col <= 3:
+    if seats[row - 1][col - 1] == "O":
+        seats[row - 1][col - 1] = "X"
+        print("Seat reserved successfully!")
+    else:
+        print("Seat is already reserved.")
+else:
+    print("Invalid row or column.")
+
+print("\nUpdated Seating Layout:")
+for row in seats:
+    print(row)
