@@ -1,0 +1,42 @@
+1. Develop an inventory manager script that stores item names as keys and their current stock
+
+
+
+counts as values. The system should update the stock count when a sale occurs and print a
+
+warning if stock drops to zero.
+
+
+
+
+# Inventory Manager
+
+# Store item names and stock counts
+inventory = {
+    "Pen": 10,
+    "Notebook": 5,
+    "Pencil": 8
+}
+
+# Take sale details
+item = input("Enter item sold: ")
+quantity = int(input("Enter quantity sold: "))
+
+# Update stock
+if item in inventory:
+    if quantity <= inventory[item]:
+        inventory[item] -= quantity
+        print("Sale completed.")
+        print("Remaining stock:", inventory[item])
+
+        # Warning if stock becomes zero
+        if inventory[item] == 0:
+            print("WARNING: Stock is zero!")
+    else:
+        print("Not enough stock available.")
+else:
+    print("Item not found.")
+
+# Display inventory
+print("\nCurrent Inventory:")
+print(inventory)
