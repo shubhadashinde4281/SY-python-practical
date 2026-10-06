@@ -1,0 +1,22 @@
+2. Create a student contact database that maps student roll numbers to email addresses,
+allowing administrators to look up contact info instantly by entering a roll ID.
+
+
+# Student Contact Database
+
+# Store roll numbers and email addresses
+students = {
+    101: "student101@gmail.com",
+    102: "student102@gmail.com",
+    103: "student103@gmail.com",
+    104: "student104@gmail.com"
+}
+
+# Enter roll number
+roll = int(input("Enter student roll number: "))
+
+# Search for email
+if roll in students:
+    print("Email Address:", students[roll])
+else:
+    print("Student not found.")
