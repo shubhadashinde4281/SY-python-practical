@@ -1,0 +1,20 @@
+2. Create a constant system logging profile that maps an IP address alongside a server port
+number inside a tuple pair, demonstrating that these settings remain secure from runtime
+modification attempts.
+
+
+
+# Store IP address and port number in a tuple
+logging_profile = ("192.168.1.10", 8080)
+
+# Unpack the tuple
+ip_address, port = logging_profile
+
+print("IP Address:", ip_address)
+print("Server Port:", port)
+
+# Try to modify the tuple
+try:
+    logging_profile[0] = "192.168.1.20"
+except TypeError:
+    print("Error: Tuple cannot be modified!")
