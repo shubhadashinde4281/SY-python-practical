@@ -1,0 +1,11 @@
+coordinates = (17.279 , 74.546)
+print("GPS Coordinates:",coordinates)
+latitude = coordinates[0]
+longitude = coordinates[1]
+print("Latitude:",latitude)
+print("Longitude:",longitude)
+print("Total Coordinates:",len(coordinates))
+if 17.279 in coordinates:
+print("Latitude is available in the tuple.")
+if 74.546 in coordinates:
+print("Longitude is available in the tuple.")
